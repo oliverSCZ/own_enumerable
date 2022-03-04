@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 ## own_enumerable
-This app is an exercise to practice enumerable.
+This project is about how to use a module inside a class. For this it was created a class MyList and a module MyEnumerable. The module MyEnumerable implemented a subset of the functionality of Enumerable.
 
 ## Built With
 
@@ -13,7 +13,7 @@ Ruby
 To get a local copy up and running follow these simple steps.
 
 To setup the Leaderboard project in your local, in the repo page: click on code (dropdown list) > Download as ZIP. or open terminal of path you want to install project and run this command
-git clone git@github.com:
+git clone https://github.com/oliverSCZ/own_enumerable.git
 
 ## Authors
 
@@ -39,7 +39,7 @@ git clone git@github.com:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/rtonata88/decode-morse-code/issues).
+Feel free to check the [issues page](https://github.com/oliverSCZ/own_enumerable/issues).
 
 ## Show your support
 
