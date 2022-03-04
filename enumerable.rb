@@ -1,27 +1,30 @@
+# frozen_string_literal: true
+
+# A module that implements method based on Enumerable Mixin
 module MyEnumerable
-    def all?
-      @return_value = true
-      @list.each do |n|
-        if yield (n)
-          @return_value = true
-        else
-          @return_value = false
-        end
-      end
-      return @return_value
+  def all?
+    @return_value = true
+    @list.each do |n|
+      @return_value = if yield n
+                        true
+                      else
+                        false
+                      end
     end
-    def any?
-      @return_value = false
-      @list.each { |n| @return_value = true if yield (n) }
-      return @return_value
-    end
-def filter
-    @filtered_array = []
-    @list.each do |n| 
-      if yield (n)
-      @filtered_array << n
-      end
-    end 
-    return @filtered_array
+    @return_value
   end
-end    
+
+  def any?
+    @return_value = false
+    @list.each { |n| @return_value = true if yield n }
+    @return_value
+  end
+
+  def filter
+    @filtered_array = []
+    @list.each do |n|
+      @filtered_array << n if yield n
+    end
+    @filtered_array
+  end
+end
