@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # A module that implements method based on Enumerable Mixin
 module MyEnumerable
   def all?
