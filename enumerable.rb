@@ -15,4 +15,13 @@ module MyEnumerable
       @list.each { |n| @return_value = true if yield (n) }
       return @return_value
     end
+def filter
+    @filtered_array = []
+    @list.each do |n| 
+      if yield (n)
+      @filtered_array << n
+      end
+    end 
+    return @filtered_array
+  end
 end    
